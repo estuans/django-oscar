@@ -53,11 +53,16 @@ the instructions on `getting started with Oscar`_.
 
 .. _getting started with Oscar: http://django-oscar.readthedocs.org/en/latest/internals/getting_started.html
 
-urls.py
--------
+URLs
+----
 
-In your project's ``urls.py``, make sure that django CMS's URLs come after
-Oscar's.urls::
+There's two options to include Oscar's URLs.
+
+This integration comes with an app hook for django CMS. So you can just let
+django CMS take care of URL handling by adding Oscar to a CMS page.
+
+If you prefer to hard-wire Oscar's URLs into your project's ``urls.py``,
+make sure that django CMS's URLs come after Oscar's.urls::
 
      urlplatterns = [
         ...
